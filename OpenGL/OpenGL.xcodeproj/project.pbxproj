@@ -17,10 +17,10 @@
 		CD7A04E520AECD5A00F323F9 /* OpenGLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7A04E420AECD5A00F323F9 /* OpenGLUITests.m */; };
 		CD9F7F5F20B3BA9900911521 /* OpenGL_01.md in Resources */ = {isa = PBXBuildFile; fileRef = CD9F7F5E20B3BA9900911521 /* OpenGL_01.md */; };
 		CD9F7F6520B3D62800911521 /* SXView01.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F7F6420B3D62800911521 /* SXView01.m */; };
-		CD9F7F6920B3F1F800911521 /* ShaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F7F6820B3F1F800911521 /* ShaderView.m */; };
 		CD9F7F6E20B4005A00911521 /* for_test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD9F7F6D20B4005A00911521 /* for_test.jpg */; };
-		CD9F7F7020B4026400911521 /* shaderv.vsh in Resources */ = {isa = PBXBuildFile; fileRef = CD9F7F6F20B4026400911521 /* shaderv.vsh */; };
-		CD9F7F7220B4035000911521 /* shaderf.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD9F7F7120B4035000911521 /* shaderf.fsh */; };
+		CD9F7F8320B42CB600911521 /* shaderf.fsh in Resources */ = {isa = PBXBuildFile; fileRef = CD9F7F7F20B42CB600911521 /* shaderf.fsh */; };
+		CD9F7F8420B42CB600911521 /* ShaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9F7F8020B42CB600911521 /* ShaderView.m */; };
+		CD9F7F8520B42CB600911521 /* shaderv.vsh in Resources */ = {isa = PBXBuildFile; fileRef = CD9F7F8220B42CB600911521 /* shaderv.vsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,11 +60,11 @@
 		CD9F7F5E20B3BA9900911521 /* OpenGL_01.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = OpenGL_01.md; sourceTree = "<group>"; };
 		CD9F7F6320B3D62800911521 /* SXView01.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SXView01.h; sourceTree = "<group>"; };
 		CD9F7F6420B3D62800911521 /* SXView01.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SXView01.m; sourceTree = "<group>"; };
-		CD9F7F6720B3F1F800911521 /* ShaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ShaderView.h; path = OpenGL/OpenGL/OpenGL_01/ShaderView.h; sourceTree = SOURCE_ROOT; };
-		CD9F7F6820B3F1F800911521 /* ShaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ShaderView.m; path = OpenGL/OpenGL/OpenGL_01/ShaderView.m; sourceTree = SOURCE_ROOT; };
 		CD9F7F6D20B4005A00911521 /* for_test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = for_test.jpg; sourceTree = "<group>"; };
-		CD9F7F6F20B4026400911521 /* shaderv.vsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = shaderv.vsh; path = OpenGL/OpenGL/OpenGL_01/shaderv.vsh; sourceTree = SOURCE_ROOT; };
-		CD9F7F7120B4035000911521 /* shaderf.fsh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.glsl; name = shaderf.fsh; path = OpenGL/OpenGL/OpenGL_01/shaderf.fsh; sourceTree = SOURCE_ROOT; };
+		CD9F7F7F20B42CB600911521 /* shaderf.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shaderf.fsh; sourceTree = "<group>"; };
+		CD9F7F8020B42CB600911521 /* ShaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShaderView.m; sourceTree = "<group>"; };
+		CD9F7F8120B42CB600911521 /* ShaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderView.h; sourceTree = "<group>"; };
+		CD9F7F8220B42CB600911521 /* shaderv.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shaderv.vsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +151,7 @@
 		CD9F7F5C20B3B0D600911521 /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
-				CD9F7F6620B3F0D000911521 /* OpenGL_02_shader */,
+				CD9F7F7E20B42CB600911521 /* OpenGL_02_shader */,
 				CD9F7F5D20B3B0E900911521 /* OpenGL_01 */,
 			);
 			path = OpenGL;
@@ -167,24 +167,23 @@
 			path = OpenGL_01;
 			sourceTree = "<group>";
 		};
-		CD9F7F6620B3F0D000911521 /* OpenGL_02_shader */ = {
-			isa = PBXGroup;
-			children = (
-				CD9F7F6F20B4026400911521 /* shaderv.vsh */,
-				CD9F7F7120B4035000911521 /* shaderf.fsh */,
-				CD9F7F6720B3F1F800911521 /* ShaderView.h */,
-				CD9F7F6820B3F1F800911521 /* ShaderView.m */,
-			);
-			name = OpenGL_02_shader;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		CD9F7F6C20B4005A00911521 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
 				CD9F7F6D20B4005A00911521 /* for_test.jpg */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		CD9F7F7E20B42CB600911521 /* OpenGL_02_shader */ = {
+			isa = PBXGroup;
+			children = (
+				CD9F7F8220B42CB600911521 /* shaderv.vsh */,
+				CD9F7F7F20B42CB600911521 /* shaderf.fsh */,
+				CD9F7F8120B42CB600911521 /* ShaderView.h */,
+				CD9F7F8020B42CB600911521 /* ShaderView.m */,
+			);
+			path = OpenGL_02_shader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,10 +295,10 @@
 				CD7A04CD20AECD5900F323F9 /* LaunchScreen.storyboard in Resources */,
 				CD9F7F6E20B4005A00911521 /* for_test.jpg in Resources */,
 				CD7A04CA20AECD5900F323F9 /* Assets.xcassets in Resources */,
-				CD9F7F7020B4026400911521 /* shaderv.vsh in Resources */,
+				CD9F7F8520B42CB600911521 /* shaderv.vsh in Resources */,
+				CD9F7F8320B42CB600911521 /* shaderf.fsh in Resources */,
 				CD9F7F5F20B3BA9900911521 /* OpenGL_01.md in Resources */,
 				CD7A04C820AECD5900F323F9 /* Main.storyboard in Resources */,
-				CD9F7F7220B4035000911521 /* shaderf.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD9F7F6920B3F1F800911521 /* ShaderView.m in Sources */,
+				CD9F7F8420B42CB600911521 /* ShaderView.m in Sources */,
 				CD9F7F6520B3D62800911521 /* SXView01.m in Sources */,
 				CD7A04C520AECD5900F323F9 /* ViewController.m in Sources */,
 				CD7A04D020AECD5900F323F9 /* main.m in Sources */,
