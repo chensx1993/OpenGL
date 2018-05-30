@@ -1,3 +1,5 @@
+
+#顶点着色器
 attribute vec4 position;
 attribute vec2 textCoordinate;
 uniform mat4 rotateMatrix;

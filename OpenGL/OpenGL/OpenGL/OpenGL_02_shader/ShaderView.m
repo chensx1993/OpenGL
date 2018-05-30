@@ -121,6 +121,20 @@
     [self.myContext presentRenderbuffer:GL_RENDERBUFFER];
 }
 
+/*
+ 环绕方式    描述
+ GL_REPEAT    对纹理的默认行为。重复纹理图像。
+ GL_MIRRORED_REPEAT    和GL_REPEAT一样，但每次重复图片是镜像放置的。
+ GL_CLAMP_TO_EDGE    纹理坐标会被约束在0到1之间，超出的部分会重复纹理坐标的边缘，产生一种边缘被拉伸的效果。
+ GL_CLAMP_TO_BORDER    超出的坐标为用户指定的边缘颜色。
+ 
+ 多级渐远纹理(Mipmap)
+ 过滤方式    描述
+ GL_NEAREST_MIPMAP_NEAREST    使用最邻近的多级渐远纹理来匹配像素大小，并使用邻近插值进行纹理采样
+ GL_LINEAR_MIPMAP_NEAREST    使用最邻近的多级渐远纹理级别，并使用线性插值进行采样
+ GL_NEAREST_MIPMAP_LINEAR    在两个最匹配像素大小的多级渐远纹理之间进行线性插值，使用邻近插值进行采样
+ GL_LINEAR_MIPMAP_LINEAR    在两个邻近的多级渐远纹理之间使用线性插值，并使用线性插值进行采样
+ */
 - (GLuint)setupTexture:(NSString *)fileName {
     CGImageRef spriteImage = [UIImage imageNamed:fileName].CGImage;
     if (!spriteImage) {
@@ -142,16 +156,25 @@
     
     glBindTexture(GL_TEXTURE_2D, 0);
     
+    //为当前绑定的纹理对象设置环绕、过滤方式
+    //纹理放大的过滤方式
     glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR );
+    //纹理缩小的过滤方式
     glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR );
+    
+    //纹理环绕方式
+    // s t r 对应 x y z
     glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
     glTexParameteri( GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
     
     float fw = width, fh = height;
+    //生成纹理 glTexImage2D
+    //纹理目标(target)  多级渐远纹理的级别  纹理储存为何种格式  宽度 高度 总是被设为0（历史遗留的问题）源图的格式 数据类型
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, fw, fh, 0, GL_RGBA, GL_UNSIGNED_BYTE, spriteData);
     
     glBindTexture(GL_TEXTURE_2D, 0);
     
+    //释放图片的内存
     free(spriteData);
     return 0;
 }
