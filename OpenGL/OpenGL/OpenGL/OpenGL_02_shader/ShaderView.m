@@ -197,6 +197,13 @@
     return program;
 }
 
+/**
+ GLSL相关
+ attribut uniform varying  不允许声明时初始化
+ attribute 限定符标记的是一种全局变量,该变量在顶点着色器中是只读（read-only）的，该变量被用作从OpenGL应用程序向顶点着色器中传递参数，因此该限定符仅能用于顶点着色器。
+ varying 变量 是vertex和fragment shader之间做数据传递用的。一般vertex shader修改varying变量的值，然后fragment shader使用该varying变量的值。因此varying变量在vertex和fragment shader二者之间的声明必须是一致的。
+ */
+
 
 /**
  编译着色器
