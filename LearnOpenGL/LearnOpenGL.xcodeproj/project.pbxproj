@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD033324221E52060081B439 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD033323221E52060081B439 /* main.cpp */; };
+		CD03332E221FA97F0081B439 /* hello_triangle_exercise2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD03332D221FA97F0081B439 /* hello_triangle_exercise2.cpp */; };
 		CD89967E221D3A2F00A9ABD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89967D221D3A2F00A9ABD7 /* Cocoa.framework */; };
 		CD899680221D3A3500A9ABD7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89967F221D3A3500A9ABD7 /* OpenGL.framework */; };
 		CD899682221D3A3C00A9ABD7 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD899681221D3A3C00A9ABD7 /* GLUT.framework */; };
@@ -31,6 +31,8 @@
 
 /* Begin PBXFileReference section */
 		CD033323221E52060081B439 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CD033326221F97630081B439 /* hello_triangle_indexed.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hello_triangle_indexed.cpp; sourceTree = "<group>"; };
+		CD03332D221FA97F0081B439 /* hello_triangle_exercise2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hello_triangle_exercise2.cpp; sourceTree = "<group>"; };
 		CD899672221D397C00A9ABD7 /* LearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD899675221D397C00A9ABD7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CD89967D221D3A2F00A9ABD7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -59,20 +61,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD033321221E51C20081B439 /* hello_window */ = {
+		CD033321221E51C20081B439 /* 1.2.hello_window */ = {
 			isa = PBXGroup;
 			children = (
 				CD899675221D397C00A9ABD7 /* main.cpp */,
 			);
-			path = hello_window;
+			path = 1.2.hello_window;
 			sourceTree = "<group>";
 		};
-		CD033322221E51D70081B439 /* hello_triangle */ = {
+		CD033322221E51D70081B439 /* 2.1.hello_triangle */ = {
 			isa = PBXGroup;
 			children = (
 				CD033323221E52060081B439 /* main.cpp */,
 			);
-			path = hello_triangle;
+			path = 2.1.hello_triangle;
+			sourceTree = "<group>";
+		};
+		CD033325221F97330081B439 /* 2.2.hello_triangle_indexed */ = {
+			isa = PBXGroup;
+			children = (
+				CD033326221F97630081B439 /* hello_triangle_indexed.cpp */,
+			);
+			path = 2.2.hello_triangle_indexed;
+			sourceTree = "<group>";
+		};
+		CD033328221FA9190081B439 /* 2.3.hello_triangle_exercise */ = {
+			isa = PBXGroup;
+			children = (
+				CD03332D221FA97F0081B439 /* hello_triangle_exercise2.cpp */,
+			);
+			path = 2.3.hello_triangle_exercise;
 			sourceTree = "<group>";
 		};
 		CD899669221D397C00A9ABD7 = {
@@ -95,8 +113,10 @@
 		CD899674221D397C00A9ABD7 /* LearnOpenGL */ = {
 			isa = PBXGroup;
 			children = (
-				CD033322221E51D70081B439 /* hello_triangle */,
-				CD033321221E51C20081B439 /* hello_window */,
+				CD033328221FA9190081B439 /* 2.3.hello_triangle_exercise */,
+				CD033325221F97330081B439 /* 2.2.hello_triangle_indexed */,
+				CD033322221E51D70081B439 /* 2.1.hello_triangle */,
+				CD033321221E51C20081B439 /* 1.2.hello_window */,
 				CD899689221D62FD00A9ABD7 /* glad.c */,
 			);
 			path = LearnOpenGL;
@@ -171,7 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD033324221E52060081B439 /* main.cpp in Sources */,
+				CD03332E221FA97F0081B439 /* hello_triangle_exercise2.cpp in Sources */,
 				CD89968A221D62FD00A9ABD7 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
