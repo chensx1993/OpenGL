@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD033337222685230081B439 /* shaders_interpolation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD033336222685230081B439 /* shaders_interpolation.cpp */; };
-		CD03333B222689AD0081B439 /* shaders_class.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD033339222689AD0081B439 /* shaders_class.cpp */; };
-		CD03334222269B3A0081B439 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD03334022269B3A0081B439 /* Shader.cpp */; };
+		CD03334C2227C70B0081B439 /* vShader.txt in Sources */ = {isa = PBXBuildFile; fileRef = CD03334B2227C0BD0081B439 /* vShader.txt */; };
+		CD03334D2227C70B0081B439 /* fShader.txt in Sources */ = {isa = PBXBuildFile; fileRef = CD03334A2227C0BC0081B439 /* fShader.txt */; };
+		CD0333522227D7F40081B439 /* esUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = CD0333512227D7F40081B439 /* esUtil.c */; };
+		CD0333552227DEF00081B439 /* FileWrapper.c in Sources */ = {isa = PBXBuildFile; fileRef = CD0333542227DEF00081B439 /* FileWrapper.c */; };
 		CD89967E221D3A2F00A9ABD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89967D221D3A2F00A9ABD7 /* Cocoa.framework */; };
 		CD899680221D3A3500A9ABD7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89967F221D3A3500A9ABD7 /* OpenGL.framework */; };
 		CD899682221D3A3C00A9ABD7 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD899681221D3A3C00A9ABD7 /* GLUT.framework */; };
@@ -39,11 +40,16 @@
 		CD03333322267F9B0081B439 /* shaders_uniform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shaders_uniform.cpp; sourceTree = "<group>"; };
 		CD033336222685230081B439 /* shaders_interpolation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shaders_interpolation.cpp; sourceTree = "<group>"; };
 		CD033339222689AD0081B439 /* shaders_class.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shaders_class.cpp; sourceTree = "<group>"; };
-		CD03333A222689AD0081B439 /* shader_s.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shader_s.h; sourceTree = "<group>"; };
 		CD03333C2226991F0081B439 /* 3.3.shader.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.3.shader.fs; sourceTree = "<group>"; };
 		CD03333D2226991F0081B439 /* 3.3.shader.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 3.3.shader.vs; sourceTree = "<group>"; };
 		CD03334022269B3A0081B439 /* Shader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Shader.cpp; sourceTree = "<group>"; };
 		CD03334122269B3A0081B439 /* Shader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
+		CD03334A2227C0BC0081B439 /* fShader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fShader.txt; sourceTree = "<group>"; };
+		CD03334B2227C0BD0081B439 /* vShader.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = vShader.txt; sourceTree = "<group>"; };
+		CD0333502227D7F40081B439 /* esUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = esUtil.h; sourceTree = "<group>"; };
+		CD0333512227D7F40081B439 /* esUtil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = esUtil.c; sourceTree = "<group>"; };
+		CD0333532227DEF00081B439 /* FileWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileWrapper.h; sourceTree = "<group>"; };
+		CD0333542227DEF00081B439 /* FileWrapper.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = FileWrapper.c; sourceTree = "<group>"; };
 		CD899672221D397C00A9ABD7 /* LearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD899675221D397C00A9ABD7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		CD89967D221D3A2F00A9ABD7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -60,11 +66,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD899680221D3A3500A9ABD7 /* OpenGL.framework in Frameworks */,
 				CD899688221D3A9300A9ABD7 /* libglfw3.a in Frameworks */,
 				CD899686221D3A4A00A9ABD7 /* IOKit.framework in Frameworks */,
 				CD899684221D3A4300A9ABD7 /* CoreVideo.framework in Frameworks */,
 				CD899682221D3A3C00A9ABD7 /* GLUT.framework in Frameworks */,
-				CD899680221D3A3500A9ABD7 /* OpenGL.framework in Frameworks */,
 				CD89967E221D3A2F00A9ABD7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -124,11 +130,8 @@
 		CD0333382226899A0081B439 /* 3.3.shaders_class */ = {
 			isa = PBXGroup;
 			children = (
-				CD03333E22269B0B0081B439 /* Shader */,
-				CD03333C2226991F0081B439 /* 3.3.shader.fs */,
-				CD03333D2226991F0081B439 /* 3.3.shader.vs */,
 				CD033339222689AD0081B439 /* shaders_class.cpp */,
-				CD03333A222689AD0081B439 /* shader_s.h */,
+				CD03333E22269B0B0081B439 /* Shader */,
 			);
 			path = 3.3.shaders_class;
 			sourceTree = "<group>";
@@ -136,10 +139,32 @@
 		CD03333E22269B0B0081B439 /* Shader */ = {
 			isa = PBXGroup;
 			children = (
-				CD03334022269B3A0081B439 /* Shader.cpp */,
 				CD03334122269B3A0081B439 /* Shader.hpp */,
+				CD03334022269B3A0081B439 /* Shader.cpp */,
 			);
 			path = Shader;
+			sourceTree = "<group>";
+		};
+		CD03334922278DCE0081B439 /* GLSL */ = {
+			isa = PBXGroup;
+			children = (
+				CD03334B2227C0BD0081B439 /* vShader.txt */,
+				CD03334A2227C0BC0081B439 /* fShader.txt */,
+				CD03333C2226991F0081B439 /* 3.3.shader.fs */,
+				CD03333D2226991F0081B439 /* 3.3.shader.vs */,
+			);
+			path = GLSL;
+			sourceTree = "<group>";
+		};
+		CD03334F2227D7F40081B439 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CD0333502227D7F40081B439 /* esUtil.h */,
+				CD0333512227D7F40081B439 /* esUtil.c */,
+				CD0333532227DEF00081B439 /* FileWrapper.h */,
+				CD0333542227DEF00081B439 /* FileWrapper.c */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		CD899669221D397C00A9ABD7 = {
@@ -162,6 +187,8 @@
 		CD899674221D397C00A9ABD7 /* LearnOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				CD03334922278DCE0081B439 /* GLSL */,
+				CD03334F2227D7F40081B439 /* Util */,
 				CD0333382226899A0081B439 /* 3.3.shaders_class */,
 				CD033335222685040081B439 /* 3.2.shaders_interpolation */,
 				CD03333222267F660081B439 /* 3.1.shaders_uniform */,
@@ -243,10 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD03334C2227C70B0081B439 /* vShader.txt in Sources */,
+				CD03334D2227C70B0081B439 /* fShader.txt in Sources */,
 				CD89968A221D62FD00A9ABD7 /* glad.c in Sources */,
-				CD03333B222689AD0081B439 /* shaders_class.cpp in Sources */,
-				CD03334222269B3A0081B439 /* Shader.cpp in Sources */,
-				CD033337222685230081B439 /* shaders_interpolation.cpp in Sources */,
+				CD0333522227D7F40081B439 /* esUtil.c in Sources */,
+				CD0333552227DEF00081B439 /* FileWrapper.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +398,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X83ZETG4A4;
-				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
-					/usr/local/include/glad,
-				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -385,10 +410,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X83ZETG4A4;
-				HEADER_SEARCH_PATHS = (
-					/usr/local/include,
-					/usr/local/include/glad,
-				);
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				LIBRARY_SEARCH_PATHS = "/usr/local/lib/**";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

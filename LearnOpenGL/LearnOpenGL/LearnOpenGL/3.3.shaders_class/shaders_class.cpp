@@ -10,10 +10,14 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 #include <cmath>
-#include "shader_s.h"
+#include <unistd.h>
+#include "Shader.hpp"
+#include <CoreFoundation/CoreFoundation.h>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
+const char *fullPath(const char* fileName);
+
 
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
@@ -56,7 +60,7 @@ int main()
     
     // build and compile our shader program
     // ------------------------------------
-    Shader ourShader("3.3.shader.vs", "3.3.shader.fs"); // you can name your shader files however you like
+    Shader ourShader(fullPath("vShader.txt"), fullPath("fShader.txt")); // you can name your shader files however you like
     
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
@@ -142,3 +146,24 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
     glViewport(0, 0, width, height);
 }
 
+#pragma mark - 获取文件的绝对路径
+const char *fullPath(const char* fileName)
+{
+//    char *dir = getcwd(NULL, 0); // Platform-dependent, see reference link below
+//    printf("Current dir: %s", dir);
+    
+//    char fullName[1024] = "/Users/chensixin/Desktop/GitHub/OpenGL/LearnOpenGL/LearnOpenGL/GLSL/";
+//    strcat(fullName, fileName);
+//    const char *newFile = fullName;
+//    return newFile;
+    return fileName;
+    CFStringRef name = CFStringCreateWithCString(NULL, fileName, kCFStringEncodingUTF8);
+    CFURLRef fileURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), name, NULL, NULL);//CFSTR("")
+    if (fileURL) {
+        CFStringRef newfilePath = CFURLCopyFileSystemPath(fileURL, kCFURLPOSIXPathStyle);
+        CFStringEncoding encodingMethod = CFStringGetSystemEncoding();
+        const char *path = CFStringGetCStringPtr(newfilePath, encodingMethod);
+        return path;
+    }
+    return fileName;
+}
