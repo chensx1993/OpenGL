@@ -42,7 +42,7 @@
 
 - (void)setupConfig {
     //kEAGLRenderingAPIOpenGLES2 OpenGL ES版本: 2.0  还有1.0 3.0
-    self.mContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    self.mContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
     
     GLKView *view = (GLKView *)self;
     view.context = self.mContext;

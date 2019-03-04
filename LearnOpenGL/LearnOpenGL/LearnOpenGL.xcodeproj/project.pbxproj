@@ -159,6 +159,7 @@
 		CD03334F2227D7F40081B439 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				CD899689221D62FD00A9ABD7 /* glad.c */,
 				CD0333502227D7F40081B439 /* esUtil.h */,
 				CD0333512227D7F40081B439 /* esUtil.c */,
 				CD0333532227DEF00081B439 /* FileWrapper.h */,
@@ -196,7 +197,6 @@
 				CD033325221F97330081B439 /* 2.2.hello_triangle_indexed */,
 				CD033322221E51D70081B439 /* 2.1.hello_triangle */,
 				CD033321221E51C20081B439 /* 1.2.hello_window */,
-				CD899689221D62FD00A9ABD7 /* glad.c */,
 			);
 			path = LearnOpenGL;
 			sourceTree = "<group>";
