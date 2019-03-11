@@ -54,6 +54,8 @@ extern void textureMain( ESContext *esContext );
     //颜色缓冲区
     view.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;
     [EAGLContext setCurrentContext:self.mContext];
+    
+    [view setNeedsDisplay];
 }
 
 - (void)setupGL {

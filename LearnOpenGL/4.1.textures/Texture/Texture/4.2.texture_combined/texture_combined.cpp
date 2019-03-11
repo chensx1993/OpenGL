@@ -17,14 +17,17 @@ typedef struct
     // Handle to a program object
     Shader shader;
     GLuint texture;
+    GLuint texture1;
     GLuint VAO;
+    GLuint VBO;
+    GLuint EBO;
     
 } UserData;
 
 int init(ESContext *esContext)
 {
-    const char *vFileName = GetBundleFileName("4.1.texture.vs");
-    const char *fFileName = GetBundleFileName("4.1.texture.fs");
+    const char *vFileName = GetBundleFileName("4.2.texture.vs");
+    const char *fFileName = GetBundleFileName("4.2.texture.fs");
     Shader ourShader(vFileName, fFileName);
 
     UserData *userData = (UserData *)esContext->userData;
@@ -71,15 +74,20 @@ int init(ESContext *esContext)
 
     // load and crxeate a texture
     // -------------------------
-    unsigned int texture;
-    glGenTextures(1, &texture);
-    glBindTexture(GL_TEXTURE_2D, texture);
+    unsigned int texture1, texture2;
+    
+    // texture 1
+    // ---------
+    glGenTextures(1, &texture1);
+    glBindTexture(GL_TEXTURE_2D, texture1);
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    
+    stbi_set_flip_vertically_on_load(true);
 
     int width, height, nrChannels;
     unsigned char *data = stbi_load(GetBundleFileName("container.jpg"), &width, &height, &nrChannels, 0);
@@ -92,10 +100,38 @@ int init(ESContext *esContext)
         std::cout << "Failed to load texture" << std::endl;
     }
     stbi_image_free(data);
-     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-
-    userData->texture = texture;
+    
+    // texture 2
+    // ---------
+    glGenTextures(1, &texture2);
+    glBindTexture(GL_TEXTURE_2D, texture2);
+    
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+    
+    data = stbi_load(GetBundleFileName("timg.jpeg"), &width, &height, &nrChannels, 0);
+    if (data) {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);
+        
+    }else {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(data);
+    
+    ourShader.use();
+    ourShader.setUniformInt("texture1", 0);
+    ourShader.setUniformInt("texture2", 1);
+    
+    glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+    userData->texture = texture1;
+    userData->texture1 = texture2;
     userData->VAO = VAO;
+    userData->VBO = VBO;
+    userData->EBO = EBO;
 
     return TRUE;
 }
@@ -110,7 +146,10 @@ void draw(ESContext *esContext)
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 
+    glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, userData->texture);
+    glActiveTexture(GL_TEXTURE1);
+    glBindTexture(GL_TEXTURE_2D, userData->texture1);
 
     ourShader.use();
     glBindVertexArray(userData->VAO);
@@ -124,6 +163,9 @@ void Shutdown(ESContext *esContext)
     Shader ourShader = userData->shader;
     ourShader.deleteProgram();
 
+    glDeleteVertexArrays(1, &(userData->VAO));
+    glDeleteBuffers(1, &(userData->VBO));
+    glDeleteBuffers(1, &(userData->EBO));
 }
 
 int textureMain(ESContext *esContext)

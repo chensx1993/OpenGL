@@ -139,50 +139,42 @@ void Shader::setUniformBool(const std::string &name, bool value) const
 #pragma mark -- 设置 uniform(int 类型) 的值
 void Shader::setUniformInt(const std::string &name, GLint v1) const
 {
-    glUseProgram(m_programId);
     glUniform1i(uniformLocation(name), v1);
 }
 
 #pragma mark -- 设置 uniform(float 类型) 的值
 void Shader::setUniformFloat(const std::string &name, GLfloat v1) const
 {
-    glUseProgram(m_programId);
     glUniform1f(uniformLocation(name), v1);
 }
 
 void Shader::setUniformVec2(const std::string &name, const glm::vec2 &value) const
 {
-    glUseProgram(m_programId);
     glUniform2fv(uniformLocation(name), 1, &value[0]);
 }
 
 void Shader::setUniformVec2(const std::string &name, GLfloat x, GLfloat y) const
 {
-    glUseProgram(m_programId);
     glUniform2f(uniformLocation(name), x, y);
 }
 
 void Shader::setUniformVec3(const std::string &name, const glm::vec3 &value) const
 {
-    glUseProgram(m_programId);
     glUniform3fv(uniformLocation(name), 1, &value[0]);
 }
 
 void Shader::setUniformVec3(const std::string &name, GLfloat x, GLfloat y, GLfloat z) const
 {
-    glUseProgram(m_programId);
     glUniform3f(uniformLocation(name), x, y, z);
 }
 
 void Shader::setUniformVec4(const std::string &name, const glm::vec4 &value) const
 {
-    glUseProgram(m_programId);
     glUniform4fv(uniformLocation(name), 1, &value[0]);
 }
 
 void Shader::setUniformVec4(const std::string &name, GLfloat x, GLfloat y, GLfloat z, GLfloat w) const
 {
-    glUseProgram(m_programId);
     glUniform4f(uniformLocation(name), x, y, z, w);
 }
 
@@ -205,7 +197,6 @@ void Shader::setUniformMat3(const std::string &name, const glm::mat3 &mat) const
 
 void Shader::setUniformMat3(const std::string &name, const GLfloat* value) const
 {
-    glUseProgram(m_programId);
     glUniformMatrix3fv(uniformLocation(name), 1, GL_FALSE, value);
 }
 
@@ -216,13 +207,11 @@ void Shader::setUniformMat4(const std::string &name, const glm::mat4 &mat) const
 
 void Shader::setUniformMat4(const std::string &name, const GLfloat* value) const
 {
-    glUseProgram(m_programId);
     glUniformMatrix4fv(uniformLocation(name), 1, GL_FALSE, value);
 }
 
 void Shader::setUniformBlockToPoint(const std::string &name, GLuint bindingPoint)
 {
-    use();
     glUniformBlockBinding(m_programId, uniformBlockIndex(name), bindingPoint);
 }
 

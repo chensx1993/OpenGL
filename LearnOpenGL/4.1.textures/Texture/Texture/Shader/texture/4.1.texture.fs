@@ -1,9 +1,7 @@
 #version 300 core
 
 #ifdef GL_ES
-
 precision lowp float;
-
 #endif
 
 out vec4 FragColor;

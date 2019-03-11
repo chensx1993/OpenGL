@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <GLKit/GLKit.h>
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet GLKView *textureView;
 
 @end
 
@@ -19,5 +22,8 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)renderButtonDidClicked:(id)sender {
+    [self.textureView display];
+}
 
 @end
