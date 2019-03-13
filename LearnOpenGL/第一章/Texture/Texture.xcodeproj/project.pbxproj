@@ -41,7 +41,12 @@
 		2B0CCF64223635400091595E /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B0CCF63223635400091595E /* timg.jpeg */; };
 		2B0CCF6822363E220091595E /* 5.1.transform.vs in Resources */ = {isa = PBXBuildFile; fileRef = 2B0CCF6622363E220091595E /* 5.1.transform.vs */; };
 		2B0CCF6922363E220091595E /* 5.1.transform.fs in Resources */ = {isa = PBXBuildFile; fileRef = 2B0CCF6722363E220091595E /* 5.1.transform.fs */; };
-		2B0CCF6C22363E870091595E /* transformations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B0CCF6B22363E870091595E /* transformations.cpp */; };
+		2B0CCF6F22379FD60091595E /* for_test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2B0CCF6E22379FD60091595E /* for_test.jpg */; };
+		2B0CCF762237ACF20091595E /* 6.1.coordinate_systems.fs in Resources */ = {isa = PBXBuildFile; fileRef = 2B0CCF742237ACF20091595E /* 6.1.coordinate_systems.fs */; };
+		2B0CCF772237ACF20091595E /* 6.1.coordinate_systems.vs in Resources */ = {isa = PBXBuildFile; fileRef = 2B0CCF752237ACF20091595E /* 6.1.coordinate_systems.vs */; };
+		2B0CCF7B2237C1210091595E /* 6.2.coordinate_systems.fs in Resources */ = {isa = PBXBuildFile; fileRef = 2B0CCF792237C1210091595E /* 6.2.coordinate_systems.fs */; };
+		2B0CCF7C2237C1210091595E /* 6.2.coordinate_systems.vs in Resources */ = {isa = PBXBuildFile; fileRef = 2B0CCF7A2237C1210091595E /* 6.2.coordinate_systems.vs */; };
+		2B0CCF7E2237C13D0091595E /* coordinate_systems_depth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B0CCF7D2237C13D0091595E /* coordinate_systems_depth.cpp */; };
 		CD0333642227E10F0081B439 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD0333632227E10F0081B439 /* AppDelegate.mm */; };
 		CD0333672227E10F0081B439 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD0333662227E10F0081B439 /* ViewController.mm */; };
 		CD03336A2227E10F0081B439 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD0333682227E10F0081B439 /* Main.storyboard */; };
@@ -118,6 +123,13 @@
 		2B0CCF6622363E220091595E /* 5.1.transform.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.transform.vs; sourceTree = "<group>"; };
 		2B0CCF6722363E220091595E /* 5.1.transform.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 5.1.transform.fs; sourceTree = "<group>"; };
 		2B0CCF6B22363E870091595E /* transformations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = transformations.cpp; sourceTree = "<group>"; };
+		2B0CCF6E22379FD60091595E /* for_test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = for_test.jpg; sourceTree = "<group>"; };
+		2B0CCF722237A9F90091595E /* coordinate_systems.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = coordinate_systems.cpp; sourceTree = "<group>"; };
+		2B0CCF742237ACF20091595E /* 6.1.coordinate_systems.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.coordinate_systems.fs; sourceTree = "<group>"; };
+		2B0CCF752237ACF20091595E /* 6.1.coordinate_systems.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.1.coordinate_systems.vs; sourceTree = "<group>"; };
+		2B0CCF792237C1210091595E /* 6.2.coordinate_systems.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.2.coordinate_systems.fs; sourceTree = "<group>"; };
+		2B0CCF7A2237C1210091595E /* 6.2.coordinate_systems.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 6.2.coordinate_systems.vs; sourceTree = "<group>"; };
+		2B0CCF7D2237C13D0091595E /* coordinate_systems_depth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = coordinate_systems_depth.cpp; sourceTree = "<group>"; };
 		CD03335F2227E10F0081B439 /* Texture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Texture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD0333622227E10F0081B439 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CD0333632227E10F0081B439 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
@@ -195,6 +207,7 @@
 			children = (
 				2B0CCF63223635400091595E /* timg.jpeg */,
 				2B08CC0B22321DAD007C8E18 /* container.jpg */,
+				2B0CCF6E22379FD60091595E /* for_test.jpg */,
 				2B08CC0C22321DAD007C8E18 /* metal.png */,
 				2B08CC0D22321DAD007C8E18 /* toy_box_disp.png */,
 				2B08CC0E22321DAD007C8E18 /* container2_specular.png */,
@@ -266,14 +279,6 @@
 			path = texture;
 			sourceTree = "<group>";
 		};
-		2B0CCF6022360AF40091595E /* 4.2.texture_combined */ = {
-			isa = PBXGroup;
-			children = (
-				2B0CCF6122360B310091595E /* texture_combined.cpp */,
-			);
-			path = 4.2.texture_combined;
-			sourceTree = "<group>";
-		};
 		2B0CCF6522363DF10091595E /* 5.1.transformations */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +294,36 @@
 				2B0CCF6B22363E870091595E /* transformations.cpp */,
 			);
 			path = 5.1.transformations;
+			sourceTree = "<group>";
+		};
+		2B0CCF702237A9470091595E /* 4.1.texture */ = {
+			isa = PBXGroup;
+			children = (
+				2B08CC02223211FD007C8E18 /* texture.cpp */,
+				2B0CCF6122360B310091595E /* texture_combined.cpp */,
+			);
+			path = 4.1.texture;
+			sourceTree = "<group>";
+		};
+		2B0CCF712237A9C90091595E /* 6.1.coordinate */ = {
+			isa = PBXGroup;
+			children = (
+				2B0CCF782237C1060091595E /* GLSL */,
+				2B0CCF722237A9F90091595E /* coordinate_systems.cpp */,
+				2B0CCF7D2237C13D0091595E /* coordinate_systems_depth.cpp */,
+			);
+			path = 6.1.coordinate;
+			sourceTree = "<group>";
+		};
+		2B0CCF782237C1060091595E /* GLSL */ = {
+			isa = PBXGroup;
+			children = (
+				2B0CCF792237C1210091595E /* 6.2.coordinate_systems.fs */,
+				2B0CCF7A2237C1210091595E /* 6.2.coordinate_systems.vs */,
+				2B0CCF742237ACF20091595E /* 6.1.coordinate_systems.fs */,
+				2B0CCF752237ACF20091595E /* 6.1.coordinate_systems.vs */,
+			);
+			path = GLSL;
 			sourceTree = "<group>";
 		};
 		CD0333562227E10F0081B439 = {
@@ -315,13 +350,13 @@
 		CD0333612227E10F0081B439 /* Texture */ = {
 			isa = PBXGroup;
 			children = (
+				2B0CCF712237A9C90091595E /* 6.1.coordinate */,
+				2B0CCF6A22363E5D0091595E /* 5.1.transformations */,
+				2B0CCF702237A9470091595E /* 4.1.texture */,
 				2B08CC7E22325640007C8E18 /* StbImage */,
 				CD0333942227E1450081B439 /* Util */,
 				2B08CC0A22321DAD007C8E18 /* resource */,
 				2B08CC04223215D4007C8E18 /* Shader */,
-				2B0CCF6A22363E5D0091595E /* 5.1.transformations */,
-				CD0333AC2227E3750081B439 /* 4.1.textures */,
-				2B0CCF6022360AF40091595E /* 4.2.texture_combined */,
 				CD0333622227E10F0081B439 /* AppDelegate.h */,
 				CD0333632227E10F0081B439 /* AppDelegate.mm */,
 				CD0333AD2227E45C0081B439 /* TexturesView.h */,
@@ -380,14 +415,6 @@
 				CD03339E2227E1D40081B439 /* libglfw3.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		CD0333AC2227E3750081B439 /* 4.1.textures */ = {
-			isa = PBXGroup;
-			children = (
-				2B08CC02223211FD007C8E18 /* texture.cpp */,
-			);
-			path = 4.1.textures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,7 +529,10 @@
 				2B08CC4B22321DAD007C8E18 /* brickwall.jpg in Resources */,
 				2B0CCF5C22360A2A0091595E /* 4.2.texture.vs in Resources */,
 				CD03336F2227E1140081B439 /* LaunchScreen.storyboard in Resources */,
+				2B0CCF6F22379FD60091595E /* for_test.jpg in Resources */,
 				CD03336C2227E1140081B439 /* Assets.xcassets in Resources */,
+				2B0CCF7C2237C1210091595E /* 6.2.coordinate_systems.vs in Resources */,
+				2B0CCF7B2237C1210091595E /* 6.2.coordinate_systems.fs in Resources */,
 				2B08CC4F22321DAD007C8E18 /* brickwall_normal.jpg in Resources */,
 				2B08CC4D22321DAD007C8E18 /* wood.png in Resources */,
 				2B08CC5722321DAE007C8E18 /* top.jpg in Resources */,
@@ -510,6 +540,7 @@
 				2B08CC4722321DAD007C8E18 /* toy_box_disp.png in Resources */,
 				2B08CC4922321DAD007C8E18 /* newport_loft.hdr in Resources */,
 				2B08CC4E22321DAD007C8E18 /* matrix.jpg in Resources */,
+				2B0CCF772237ACF20091595E /* 6.1.coordinate_systems.vs in Resources */,
 				2B08CC5422321DAD007C8E18 /* awesomeface.png in Resources */,
 				2B08CC5622321DAD007C8E18 /* left.jpg in Resources */,
 				2B08CC5B22321DAE007C8E18 /* bricks2.jpg in Resources */,
@@ -528,6 +559,7 @@
 				2B0CCF6822363E220091595E /* 5.1.transform.vs in Resources */,
 				2B08CC4C22321DAD007C8E18 /* toy_box_normal.png in Resources */,
 				2B08CC4A22321DAD007C8E18 /* bricks2_disp.jpg in Resources */,
+				2B0CCF762237ACF20091595E /* 6.1.coordinate_systems.fs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,10 +586,10 @@
 			files = (
 				CD0333672227E10F0081B439 /* ViewController.mm in Sources */,
 				2B08CA012232041D007C8E18 /* Shader.cpp in Sources */,
-				2B0CCF6C22363E870091595E /* transformations.cpp in Sources */,
 				CD0333AF2227E45C0081B439 /* TexturesView.mm in Sources */,
 				CD0333722227E1140081B439 /* main.m in Sources */,
 				CD03339C2227E1450081B439 /* FileWrapper.cpp in Sources */,
+				2B0CCF7E2237C13D0091595E /* coordinate_systems_depth.cpp in Sources */,
 				2B08CC8122325640007C8E18 /* stb_image.cpp in Sources */,
 				CD0333642227E10F0081B439 /* AppDelegate.mm in Sources */,
 				CD03339A2227E1450081B439 /* esUtil.cpp in Sources */,
