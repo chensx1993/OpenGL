@@ -12,7 +12,7 @@
 		2BCBA7ED223F77CB00D15FD0 /* FileWrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBA7EB223F77CB00D15FD0 /* FileWrapper.cpp */; };
 		2BCBA7F1223F78EE00D15FD0 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBA7EF223F78EE00D15FD0 /* Camera.cpp */; };
 		2BCBA7F3223FA62700D15FD0 /* stb_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBA7D7223F48C100D15FD0 /* stb_image.cpp */; };
-		2BCBA84B22424A9C00D15FD0 /* colors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBA84A22424A9C00D15FD0 /* colors.cpp */; };
+		2BCBA8532243994900D15FD0 /* basic_lighting_specular.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBA8522243994900D15FD0 /* basic_lighting_specular.cpp */; };
 		CD89967E221D3A2F00A9ABD7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89967D221D3A2F00A9ABD7 /* Cocoa.framework */; };
 		CD899680221D3A3500A9ABD7 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD89967F221D3A3500A9ABD7 /* OpenGL.framework */; };
 		CD899682221D3A3C00A9ABD7 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD899681221D3A3C00A9ABD7 /* GLUT.framework */; };
@@ -100,6 +100,16 @@
 		2BCBA84822424A9700D15FD0 /* 1.colors.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 1.colors.fs; sourceTree = "<group>"; };
 		2BCBA84922424A9700D15FD0 /* 1.colors.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 1.colors.vs; sourceTree = "<group>"; };
 		2BCBA84A22424A9C00D15FD0 /* colors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = colors.cpp; sourceTree = "<group>"; };
+		2BCBA84C2243713600D15FD0 /* 2.1.lamp.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.1.lamp.fs; sourceTree = "<group>"; };
+		2BCBA84D2243713600D15FD0 /* 2.1.basic_lighting.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.1.basic_lighting.fs; sourceTree = "<group>"; };
+		2BCBA84E2243713600D15FD0 /* 2.1.lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.1.lamp.vs; sourceTree = "<group>"; };
+		2BCBA84F2243713600D15FD0 /* 2.1.basic_lighting.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.1.basic_lighting.vs; sourceTree = "<group>"; };
+		2BCBA8502243715F00D15FD0 /* basic_lighting_diffuse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = basic_lighting_diffuse.cpp; sourceTree = "<group>"; };
+		2BCBA8522243994900D15FD0 /* basic_lighting_specular.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = basic_lighting_specular.cpp; sourceTree = "<group>"; };
+		2BCBA854224399A700D15FD0 /* 2.2.lamp.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.vs; sourceTree = "<group>"; };
+		2BCBA855224399A700D15FD0 /* 2.2.basic_lighting.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.fs; sourceTree = "<group>"; };
+		2BCBA856224399A700D15FD0 /* 2.2.lamp.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.lamp.fs; sourceTree = "<group>"; };
+		2BCBA857224399A700D15FD0 /* 2.2.basic_lighting.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = 2.2.basic_lighting.vs; sourceTree = "<group>"; };
 		CD899672221D397C00A9ABD7 /* LearnOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD89967D221D3A2F00A9ABD7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CD89967F221D3A3500A9ABD7 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -167,6 +177,8 @@
 		2BCBA7DE223F4AC200D15FD0 /* OpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				2BCBA8522243994900D15FD0 /* basic_lighting_specular.cpp */,
+				2BCBA8502243715F00D15FD0 /* basic_lighting_diffuse.cpp */,
 				2BCBA84A22424A9C00D15FD0 /* colors.cpp */,
 			);
 			path = OpenGL;
@@ -314,6 +326,14 @@
 		2BCBA84522424A8900D15FD0 /* GLSL */ = {
 			isa = PBXGroup;
 			children = (
+				2BCBA857224399A700D15FD0 /* 2.2.basic_lighting.vs */,
+				2BCBA855224399A700D15FD0 /* 2.2.basic_lighting.fs */,
+				2BCBA854224399A700D15FD0 /* 2.2.lamp.vs */,
+				2BCBA856224399A700D15FD0 /* 2.2.lamp.fs */,
+				2BCBA84F2243713600D15FD0 /* 2.1.basic_lighting.vs */,
+				2BCBA84D2243713600D15FD0 /* 2.1.basic_lighting.fs */,
+				2BCBA84C2243713600D15FD0 /* 2.1.lamp.fs */,
+				2BCBA84E2243713600D15FD0 /* 2.1.lamp.vs */,
 				2BCBA84822424A9700D15FD0 /* 1.colors.fs */,
 				2BCBA84922424A9700D15FD0 /* 1.colors.vs */,
 				2BCBA84622424A9600D15FD0 /* 1.lamp.fs */,
@@ -431,10 +451,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BCBA7DB223F490100D15FD0 /* esUtil.cpp in Sources */,
+				2BCBA8532243994900D15FD0 /* basic_lighting_specular.cpp in Sources */,
 				2BCBA7F3223FA62700D15FD0 /* stb_image.cpp in Sources */,
 				2BCBA7F1223F78EE00D15FD0 /* Camera.cpp in Sources */,
 				2BCBA7ED223F77CB00D15FD0 /* FileWrapper.cpp in Sources */,
-				2BCBA84B22424A9C00D15FD0 /* colors.cpp in Sources */,
 				CD89968A221D62FD00A9ABD7 /* glad.c in Sources */,
 				2BCBA7D0223F3E2B00D15FD0 /* Shader.cpp in Sources */,
 			);
