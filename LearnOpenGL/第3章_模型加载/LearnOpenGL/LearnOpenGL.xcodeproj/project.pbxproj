@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B089386224C74A20031E766 /* model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B089384224C74A20031E766 /* model.cpp */; };
 		2B3F12C0224B50B7007ECE3A /* libassimp.4.1.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B3F12BF224B50B7007ECE3A /* libassimp.4.1.0.dylib */; };
 		2B3F12C7224B5ACB007ECE3A /* mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B3F12C5224B5ACB007ECE3A /* mesh.cpp */; };
 		2BCBA7D0223F3E2B00D15FD0 /* Shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2BCBA7CF223F3E2B00D15FD0 /* Shader.cpp */; };
@@ -37,8 +38,60 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2B089384224C74A20031E766 /* model.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = model.cpp; sourceTree = "<group>"; };
+		2B089385224C74A20031E766 /* model.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = model.hpp; sourceTree = "<group>"; };
+		2B089389224CB6A60031E766 /* hand_showroom_refl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_showroom_refl.png; sourceTree = "<group>"; };
+		2B08938A224CB6A60031E766 /* body_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_showroom_ddn.png; sourceTree = "<group>"; };
+		2B08938B224CB6A60031E766 /* helmet_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_showroom_ddn.png; sourceTree = "<group>"; };
+		2B08938C224CB6A60031E766 /* arm_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_ddn.png; sourceTree = "<group>"; };
+		2B08938D224CB6A60031E766 /* arm_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_spec.png; sourceTree = "<group>"; };
+		2B08938E224CB6A60031E766 /* leg_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_dif.png; sourceTree = "<group>"; };
+		2B08938F224CB6A60031E766 /* arm_showroom_refl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_showroom_refl.png; sourceTree = "<group>"; };
+		2B089390224CB6A60031E766 /* cell_body_alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_body_alpha.png; sourceTree = "<group>"; };
+		2B089391224CB6A60031E766 /* hand_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_showroom_spec.png; sourceTree = "<group>"; };
+		2B089392224CB6A60031E766 /* glass_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glass_ddn.png; sourceTree = "<group>"; };
+		2B089393224CB6A60031E766 /* glass_refl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glass_refl.png; sourceTree = "<group>"; };
+		2B089394224CB6A60031E766 /* cell_hand_alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_hand_alpha.png; sourceTree = "<group>"; };
+		2B089395224CB6A60031E766 /* nanosuit.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nanosuit.mtl; sourceTree = "<group>"; };
+		2B089396224CB6A60031E766 /* body_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_dif.png; sourceTree = "<group>"; };
+		2B089397224CB6A60031E766 /* hand_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_showroom_ddn.png; sourceTree = "<group>"; };
+		2B089398224CB6A60031E766 /* body_showroom_refl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_showroom_refl.png; sourceTree = "<group>"; };
+		2B089399224CB6A60031E766 /* glass_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glass_dif.png; sourceTree = "<group>"; };
+		2B08939A224CB6A60031E766 /* arm_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arm_dif.png; sourceTree = "<group>"; };
+		2B08939B224CB6A60031E766 /* cell_leg_alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_leg_alpha.png; sourceTree = "<group>"; };
+		2B08939C224CB6A60031E766 /* helmet_diff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_diff.png; sourceTree = "<group>"; };
+		2B08939D224CB6A60031E766 /* nanosuit.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nanosuit.obj; sourceTree = "<group>"; };
+		2B08939E224CB6A60031E766 /* leg_showroom_refl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_showroom_refl.png; sourceTree = "<group>"; };
+		2B08939F224CB6A60031E766 /* cell_helmet_alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_helmet_alpha.png; sourceTree = "<group>"; };
+		2B0893A0224CB6A60031E766 /* leg_showroom_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_showroom_ddn.png; sourceTree = "<group>"; };
+		2B0893A1224CB6A60031E766 /* helmet_showroom_refl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_showroom_refl.png; sourceTree = "<group>"; };
+		2B0893A2224CB6A60031E766 /* cell_arm_alpha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_arm_alpha.png; sourceTree = "<group>"; };
+		2B0893A3224CB6A60031E766 /* helmet_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = helmet_showroom_spec.png; sourceTree = "<group>"; };
+		2B0893A4224CB6A60031E766 /* leg_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leg_showroom_spec.png; sourceTree = "<group>"; };
+		2B0893A5224CB6A60031E766 /* cell_ddn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_ddn.png; sourceTree = "<group>"; };
+		2B0893A6224CB6A60031E766 /* body_showroom_spec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body_showroom_spec.png; sourceTree = "<group>"; };
+		2B0893A7224CB6A60031E766 /* back.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = back.jpg; sourceTree = "<group>"; };
+		2B0893A8224CB6A60031E766 /* front.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = front.jpg; sourceTree = "<group>"; };
+		2B0893A9224CB6A60031E766 /* hand_dif.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hand_dif.png; sourceTree = "<group>"; };
+		2B0893AB224CB6A60031E766 /* planet_Quom1200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = planet_Quom1200.png; sourceTree = "<group>"; };
+		2B0893AC224CB6A60031E766 /* planet.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = planet.obj; sourceTree = "<group>"; };
+		2B0893AD224CB6A60031E766 /* planet.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = planet.mtl; sourceTree = "<group>"; };
+		2B0893AF224CB6A60031E766 /* rock.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rock.obj; sourceTree = "<group>"; };
+		2B0893B0224CB6A60031E766 /* rock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rock.png; sourceTree = "<group>"; };
+		2B0893B1224CB6A60031E766 /* rock.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rock.mtl; sourceTree = "<group>"; };
+		2B0893B3224CB6A60031E766 /* cyborg.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cyborg.obj; sourceTree = "<group>"; };
+		2B0893B4224CB6A60031E766 /* cyborg.blend1 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cyborg.blend1; sourceTree = "<group>"; };
+		2B0893B5224CB6A60031E766 /* cyborg.blend */ = {isa = PBXFileReference; lastKnownFileType = file; path = cyborg.blend; sourceTree = "<group>"; };
+		2B0893B6224CB6A60031E766 /* cyborg_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cyborg_normal.png; sourceTree = "<group>"; };
+		2B0893B7224CB6A60031E766 /* cyborg_diffuse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cyborg_diffuse.png; sourceTree = "<group>"; };
+		2B0893B8224CB6A60031E766 /* cyborg_specular.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cyborg_specular.png; sourceTree = "<group>"; };
+		2B0893B9224CB6A60031E766 /* cyborg.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cyborg.mtl; sourceTree = "<group>"; };
+		2B0893BA224CB6A60031E766 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		2B0893BC224CDA840031E766 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		2B0893BD224CDA850031E766 /* SimpleOpenGL.sln */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SimpleOpenGL.sln; sourceTree = "<group>"; };
+		2B0893BE224CDA850031E766 /* Sample_SimpleOpenGL.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Sample_SimpleOpenGL.c; sourceTree = "<group>"; };
+		2B0893BF224CDA850031E766 /* SimpleOpenGL.vcproj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SimpleOpenGL.vcproj; sourceTree = "<group>"; };
 		2B3F12BF224B50B7007ECE3A /* libassimp.4.1.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libassimp.4.1.0.dylib; path = ../../../../../../../../usr/local/lib/libassimp.4.1.0.dylib; sourceTree = "<group>"; };
-		2B3F12C2224B589D007ECE3A /* model.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = model.h; sourceTree = "<group>"; };
 		2B3F12C5224B5ACB007ECE3A /* mesh.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mesh.cpp; sourceTree = "<group>"; };
 		2B3F12C6224B5ACB007ECE3A /* mesh.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mesh.hpp; sourceTree = "<group>"; };
 		2BCBA7CE223F3E2B00D15FD0 /* Shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Shader.hpp; sourceTree = "<group>"; };
@@ -132,10 +185,108 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B089387224CB6A60031E766 /* objects */ = {
+			isa = PBXGroup;
+			children = (
+				2B089388224CB6A60031E766 /* nanosuit */,
+				2B0893AA224CB6A60031E766 /* planet */,
+				2B0893AE224CB6A60031E766 /* rock */,
+				2B0893B2224CB6A60031E766 /* cyborg */,
+			);
+			path = objects;
+			sourceTree = "<group>";
+		};
+		2B089388224CB6A60031E766 /* nanosuit */ = {
+			isa = PBXGroup;
+			children = (
+				2B089389224CB6A60031E766 /* hand_showroom_refl.png */,
+				2B08938A224CB6A60031E766 /* body_showroom_ddn.png */,
+				2B08938B224CB6A60031E766 /* helmet_showroom_ddn.png */,
+				2B08938C224CB6A60031E766 /* arm_showroom_ddn.png */,
+				2B08938D224CB6A60031E766 /* arm_showroom_spec.png */,
+				2B08938E224CB6A60031E766 /* leg_dif.png */,
+				2B08938F224CB6A60031E766 /* arm_showroom_refl.png */,
+				2B089390224CB6A60031E766 /* cell_body_alpha.png */,
+				2B089391224CB6A60031E766 /* hand_showroom_spec.png */,
+				2B089392224CB6A60031E766 /* glass_ddn.png */,
+				2B089393224CB6A60031E766 /* glass_refl.png */,
+				2B089394224CB6A60031E766 /* cell_hand_alpha.png */,
+				2B089395224CB6A60031E766 /* nanosuit.mtl */,
+				2B089396224CB6A60031E766 /* body_dif.png */,
+				2B089397224CB6A60031E766 /* hand_showroom_ddn.png */,
+				2B089398224CB6A60031E766 /* body_showroom_refl.png */,
+				2B089399224CB6A60031E766 /* glass_dif.png */,
+				2B08939A224CB6A60031E766 /* arm_dif.png */,
+				2B08939B224CB6A60031E766 /* cell_leg_alpha.png */,
+				2B08939C224CB6A60031E766 /* helmet_diff.png */,
+				2B08939D224CB6A60031E766 /* nanosuit.obj */,
+				2B08939E224CB6A60031E766 /* leg_showroom_refl.png */,
+				2B08939F224CB6A60031E766 /* cell_helmet_alpha.png */,
+				2B0893A0224CB6A60031E766 /* leg_showroom_ddn.png */,
+				2B0893A1224CB6A60031E766 /* helmet_showroom_refl.png */,
+				2B0893A2224CB6A60031E766 /* cell_arm_alpha.png */,
+				2B0893A3224CB6A60031E766 /* helmet_showroom_spec.png */,
+				2B0893A4224CB6A60031E766 /* leg_showroom_spec.png */,
+				2B0893A5224CB6A60031E766 /* cell_ddn.png */,
+				2B0893A6224CB6A60031E766 /* body_showroom_spec.png */,
+				2B0893A7224CB6A60031E766 /* back.jpg */,
+				2B0893A8224CB6A60031E766 /* front.jpg */,
+				2B0893A9224CB6A60031E766 /* hand_dif.png */,
+			);
+			path = nanosuit;
+			sourceTree = "<group>";
+		};
+		2B0893AA224CB6A60031E766 /* planet */ = {
+			isa = PBXGroup;
+			children = (
+				2B0893AB224CB6A60031E766 /* planet_Quom1200.png */,
+				2B0893AC224CB6A60031E766 /* planet.obj */,
+				2B0893AD224CB6A60031E766 /* planet.mtl */,
+			);
+			path = planet;
+			sourceTree = "<group>";
+		};
+		2B0893AE224CB6A60031E766 /* rock */ = {
+			isa = PBXGroup;
+			children = (
+				2B0893AF224CB6A60031E766 /* rock.obj */,
+				2B0893B0224CB6A60031E766 /* rock.png */,
+				2B0893B1224CB6A60031E766 /* rock.mtl */,
+			);
+			path = rock;
+			sourceTree = "<group>";
+		};
+		2B0893B2224CB6A60031E766 /* cyborg */ = {
+			isa = PBXGroup;
+			children = (
+				2B0893B3224CB6A60031E766 /* cyborg.obj */,
+				2B0893B4224CB6A60031E766 /* cyborg.blend1 */,
+				2B0893B5224CB6A60031E766 /* cyborg.blend */,
+				2B0893B6224CB6A60031E766 /* cyborg_normal.png */,
+				2B0893B7224CB6A60031E766 /* cyborg_diffuse.png */,
+				2B0893B8224CB6A60031E766 /* cyborg_specular.png */,
+				2B0893B9224CB6A60031E766 /* cyborg.mtl */,
+				2B0893BA224CB6A60031E766 /* LICENSE.txt */,
+			);
+			path = cyborg;
+			sourceTree = "<group>";
+		};
+		2B0893BB224CDA650031E766 /* assimpDemo */ = {
+			isa = PBXGroup;
+			children = (
+				2B0893BC224CDA840031E766 /* CMakeLists.txt */,
+				2B0893BE224CDA850031E766 /* Sample_SimpleOpenGL.c */,
+				2B0893BD224CDA850031E766 /* SimpleOpenGL.sln */,
+				2B0893BF224CDA850031E766 /* SimpleOpenGL.vcproj */,
+			);
+			path = assimpDemo;
+			sourceTree = "<group>";
+		};
 		2B3F12C1224B588A007ECE3A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2B3F12C2224B589D007ECE3A /* model.h */,
+				2B089385224C74A20031E766 /* model.hpp */,
+				2B089384224C74A20031E766 /* model.cpp */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,8 +294,8 @@
 		2B3F12C3224B594E007ECE3A /* Mesh */ = {
 			isa = PBXGroup;
 			children = (
-				2B3F12C5224B5ACB007ECE3A /* mesh.cpp */,
 				2B3F12C6224B5ACB007ECE3A /* mesh.hpp */,
+				2B3F12C5224B5ACB007ECE3A /* mesh.cpp */,
 			);
 			path = Mesh;
 			sourceTree = "<group>";
@@ -327,6 +478,7 @@
 		2BCBA8402242281900D15FD0 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				2B089387224CB6A60031E766 /* objects */,
 				2BCBA84522424A8900D15FD0 /* GLSL */,
 				2BCBA805224227F700D15FD0 /* textures */,
 			);
@@ -336,8 +488,8 @@
 		2BCBA84522424A8900D15FD0 /* GLSL */ = {
 			isa = PBXGroup;
 			children = (
-				2BCBA878224A392400D15FD0 /* 1.model_loading.fs */,
 				2BCBA879224A392400D15FD0 /* 1.model_loading.vs */,
+				2BCBA878224A392400D15FD0 /* 1.model_loading.fs */,
 			);
 			path = GLSL;
 			sourceTree = "<group>";
@@ -376,6 +528,7 @@
 		CD899674221D397C00A9ABD7 /* LearnOpenGL */ = {
 			isa = PBXGroup;
 			children = (
+				2B0893BB224CDA650031E766 /* assimpDemo */,
 				2BCBA8402242281900D15FD0 /* resources */,
 				CD03334F2227D7F40081B439 /* Common */,
 				2BCBA7DE223F4AC200D15FD0 /* OpenGL */,
@@ -455,6 +608,7 @@
 			files = (
 				2BCBA871224A2A6C00D15FD0 /* model_loading.cpp in Sources */,
 				2BCBA7DB223F490100D15FD0 /* esUtil.cpp in Sources */,
+				2B089386224C74A20031E766 /* model.cpp in Sources */,
 				2BCBA7F3223FA62700D15FD0 /* stb_image.cpp in Sources */,
 				2BCBA7F1223F78EE00D15FD0 /* Camera.cpp in Sources */,
 				2BCBA7ED223F77CB00D15FD0 /* FileWrapper.cpp in Sources */,

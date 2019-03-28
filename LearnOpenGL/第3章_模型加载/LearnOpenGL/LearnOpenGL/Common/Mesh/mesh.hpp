@@ -27,7 +27,7 @@ using namespace std;
 struct Vertex {
     glm::vec3 Position;
     glm::vec3 Normal;
-    glm::vec3 TexCoords;
+    glm::vec2 TexCoords;
     glm::vec3 Tangent;
     glm::vec3 Bitangent;
 };
@@ -48,7 +48,7 @@ public:
     
     Mesh(vector<Vertex> vertices, vector<GLuint> indices, vector<Texture> textures);
     
-    void Draw(Shader shader);
+    void draw(Shader shader);
     
 private:
     unsigned int VBO, EBO;
